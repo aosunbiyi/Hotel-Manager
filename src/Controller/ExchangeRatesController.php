@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
+use Cake\Log\Log;
 
 /**
  * ExchangeRates Controller
@@ -50,6 +52,15 @@ class ExchangeRatesController extends AppController
     {
         $exchangeRate = $this->ExchangeRates->newEntity();
         if ($this->request->is('post')) {
+
+            $postedData =  $this->request->getData();
+
+            if($postedData['is_base_currency']==1){  
+                $connection= ConnectionManager::get('default');
+                $connection->execute('UPDATE exchange_rates  SET is_base_currency=0;');
+            }
+         
+
             $exchangeRate = $this->ExchangeRates->patchEntity($exchangeRate, $this->request->getData());
             if ($this->ExchangeRates->save($exchangeRate)) {
                 $this->Flash->success(__('The exchange rate has been saved.'));
@@ -74,6 +85,15 @@ class ExchangeRatesController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+            $postedData =  $this->request->getData();
+
+            if($postedData['is_base_currency']==1){  
+                $connection= ConnectionManager::get('default');
+                $connection->execute('UPDATE exchange_rates  SET is_base_currency=0;');
+            }
+         
+
+
             $exchangeRate = $this->ExchangeRates->patchEntity($exchangeRate, $this->request->getData());
             if ($this->ExchangeRates->save($exchangeRate)) {
                 $this->Flash->success(__('The exchange rate has been saved.'));

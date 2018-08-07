@@ -8,6 +8,11 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $settlement_name
+ * @property int $can_generate_receipt
+ * @property int $start_index
+ * @property int $current_index
+ * @property string $prefix
+ * @property string $suffix
  * @property string $alias
  * @property int $active
  * @property string $payment_option
@@ -30,6 +35,11 @@ class SettlementType extends Entity
      */
     protected $_accessible = [
         'settlement_name' => true,
+        'can_generate_receipt' => true,
+        'start_index' => true,
+        'current_index' => true,
+        'prefix' => true,
+        'suffix' => true,
         'alias' => true,
         'active' => true,
         'payment_option' => true,

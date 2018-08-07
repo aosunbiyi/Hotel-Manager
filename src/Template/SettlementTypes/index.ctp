@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @var \App\View\AppView $this
@@ -124,8 +125,11 @@
         <thead>
             <tr>
               
-                <th scope="col"><?= $this->Paginator->sort('settlement_name') ?></th>
-               
+                <th scope="col"><?= $this->Paginator->sort('settlement') ?></th>
+                           <th scope="col"><?= $this->Paginator->sort('sindex') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('cindex') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('prefix') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('suffix') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -136,9 +140,14 @@
             <tr>
                 
                 <td><?= h($settlementType->settlement_name) ?></td>
+				 <td><?= $this->Number->format($settlementType->start_index) ?></td>
+                <td><?= $this->Number->format($settlementType->current_index) ?></td>
+                <td><?= h($settlementType->prefix) ?></td>
+                <td><?= h($settlementType->suffix) ?></td>
                 
                 <td><?= h($settlementType->created) ?></td>
                 <td><?= h($settlementType->modified) ?></td>
+				
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $settlementType->id],['class'=>'btn btn-primary btn-sm']) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $settlementType->id],['class'=>'btn btn-success btn-sm']) ?>

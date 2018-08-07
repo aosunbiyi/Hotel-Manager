@@ -30,6 +30,7 @@ class Tax extends Entity
      */
     protected $_accessible = [
         'tax_name' => true,
+        'value' => true,
         'duration' => true,
         'charge_on_extra_adult' => true,
         'charge_on_extra_child' => true,

@@ -75,6 +75,10 @@ class TaxesTable extends Table
             ->scalar('format')
             ->maxLength('format', 255)
             ->allowEmpty('format');
+        
+        $validator
+            ->decimal('value')
+            ->notEmpty('value');
 
         return $validator;
     }

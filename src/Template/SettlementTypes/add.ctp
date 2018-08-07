@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * @var \App\View\AppView $this
@@ -155,6 +157,13 @@
                 <?php
 
 echo $this->Form->control('settlement_name',['class'=>'form-control m-input m-input--square']);
+echo '<br>';
+echo $this->Form->label('can_generate_receipt');
+echo $this->Form->control('can_generate_receipt',['type'=>'checkbox','label'=>false]);
+echo $this->Form->control('start_index',['class'=>'form-control m-input m-input--square']);
+echo $this->Form->control('current_index',['class'=>'form-control m-input m-input--square']);
+echo $this->Form->control('prefix',['class'=>'form-control m-input m-input--square']);
+echo $this->Form->control('suffix',['class'=>'form-control m-input m-input--square']);
 echo $this->Form->control('alias',['class'=>'form-control m-input m-input--square']);
 echo '<br>';
 echo $this->Form->label('active');

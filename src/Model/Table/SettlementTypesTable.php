@@ -64,6 +64,30 @@ class SettlementTypesTable extends Table
             ->allowEmpty('settlement_name');
 
         $validator
+            ->requirePresence('can_generate_receipt', 'create')
+            ->notEmpty('can_generate_receipt');
+
+        $validator
+            ->requirePresence('start_index', 'create')
+            ->notEmpty('start_index');
+
+        $validator
+            ->requirePresence('current_index', 'create')
+            ->notEmpty('current_index');
+
+        $validator
+            ->scalar('prefix')
+            ->maxLength('prefix', 255)
+            ->requirePresence('prefix', 'create')
+            ->notEmpty('prefix');
+
+        $validator
+            ->scalar('suffix')
+            ->maxLength('suffix', 255)
+            ->requirePresence('suffix', 'create')
+            ->notEmpty('suffix');
+
+        $validator
             ->scalar('alias')
             ->maxLength('alias', 255)
             ->allowEmpty('alias');

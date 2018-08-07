@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @var \App\View\AppView $this
@@ -172,6 +173,28 @@
             <th scope="row"><?= __('Alias') ?></th>
             <td><?= h($settlementType->alias) ?></td>
         </tr>
+		<tr>
+            <th scope="row"><?= __('Prefix') ?></th>
+            <td><?= h($settlementType->prefix) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Suffix') ?></th>
+            <td><?= h($settlementType->suffix) ?></td>
+        </tr>
+		
+		 <tr>
+            <th scope="row"><?= __('Can Generate Receipt') ?></th>
+            <td><?= $this->Number->format($settlementType->can_generate_receipt) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Start Index') ?></th>
+            <td><?= $this->Number->format($settlementType->start_index) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Current Index') ?></th>
+            <td><?= $this->Number->format($settlementType->current_index) ?></td>
+        </tr>
+		
         <tr>
             <th scope="row"><?= __('Payment Option') ?></th>
             <td><?= h($settlementType->payment_option) ?></td>

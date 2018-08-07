@@ -57,6 +57,9 @@ class ExchangeRatesTable extends Table
             ->maxLength('country_name', 255)
             ->allowEmpty('country_name');
 
+            $validator
+            ->allowEmpty('is_base_currency');
+
         $validator
             ->allowEmpty('active');
 

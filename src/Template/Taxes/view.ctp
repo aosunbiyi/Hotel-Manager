@@ -156,6 +156,11 @@
 
     <table class="table table-stripped">
   
+    <tr>
+            <th scope="row"><?= __('Value') ?></th>
+            <td><?= h($tax->value) ?></td>
+        </tr>
+
   
         <tr>
             <th scope="row"><?= __('Format') ?></th>

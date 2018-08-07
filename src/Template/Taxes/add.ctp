@@ -138,6 +138,7 @@
                 <?php
 
 echo $this->Form->control('tax_name',['class'=>'form-control m-input m-input--square']);
+echo $this->Form->control('value',['class'=>'form-control m-input m-input--square']);
 echo $this->Form->control('duration',['class'=>'form-control m-input m-input--square']);
 echo '<br>';
 echo $this->Form->label('charge_on_extra_adult');

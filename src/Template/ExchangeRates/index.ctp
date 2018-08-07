@@ -125,6 +125,7 @@
             <tr>
             
                 <th scope="col"><?= $this->Paginator->sort('Currency') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Base Currency') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('Symbol') ?></th> 
                 <th scope="col"><?= $this->Paginator->sort('decimal_place') ?></th>
               
@@ -139,6 +140,7 @@
             <tr>
               
                 <td><?= h($exchangeRate->currency_name) ?></td>
+                <td><?= h($exchangeRate->is_base_currency) ?></td>
                 <td><?= h($exchangeRate->currency_symbol) ?></td>
                 <td><?= $this->Number->format($exchangeRate->decimal_place) ?></td>
             

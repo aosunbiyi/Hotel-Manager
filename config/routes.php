@@ -49,7 +49,7 @@ Router::defaultRouteClass(DashedRoute::class);
 
 
 Router::prefix('api/v1', function ($routes) {
-    $routes->extensions(['json', 'xml']);
+    $routes->setExtensions(['json', 'xml']);
     $routes->resources('Rooms');
     $routes->resources('Users');
     $routes->resources('Accounts');

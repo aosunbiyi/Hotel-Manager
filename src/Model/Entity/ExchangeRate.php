@@ -31,6 +31,7 @@ class ExchangeRate extends Entity
      */
     protected $_accessible = [
         'country_name' => true,
+        'is_base_currency' => true,
         'active' => true,
         'decimal_place' => true,
         'currency_name' => true,

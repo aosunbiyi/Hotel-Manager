@@ -119,6 +119,7 @@
                         <tr>
                            
                             <th scope="col"><?= $this->Paginator->sort('tax_name') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('value') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('duration') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('Format') ?></th>
                            
@@ -133,6 +134,7 @@
                         <tr>
                        
                             <td><?= h($tax->tax_name) ?></td>
+                            <td><?= $this->Number->format($tax->value) ?></td>
                             <td><?= $this->Number->format($tax->duration) ?></td>
                             <td><?= h($tax->format) ?></td>
                             

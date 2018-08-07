@@ -167,8 +167,10 @@
             <th scope="row"><?= __('Country Name') ?></th>
             <td><?= h($exchangeRate->country_name) ?></td>
         </tr>
-  
-  
+        <tr>
+            <th scope="row"><?= __('Base Currency') ?></th>
+            <td><?= $this->Number->format($exchangeRate->is_base_currency) ?></td>
+        </tr> 
   
         <tr>
             <th scope="row"><?= __('Active') ?></th>
