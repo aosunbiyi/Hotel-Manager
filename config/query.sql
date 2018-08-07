@@ -358,6 +358,7 @@ CREATE TABLE exchange_rates(
 CREATE TABLE settlement_types(
     id INT  AUTO_INCREMENT PRIMARY KEY,
     settlement_name VARCHAR(255),
+    can_generate_receipt TINYINT(4),
     alias  VARCHAR(255),
     active TINYINT(4),
     payment_option  VARCHAR(255),
