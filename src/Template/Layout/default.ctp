@@ -297,13 +297,7 @@ $cakeDescription = 'Hotel Manager';
 																		</span>
 																	</a>
 																</li>
-																<li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
-																	<a  href="/RoomOwners" class="m-menu__link ">
-																		<span class="m-menu__link-text">
-                                                                        Room Owners
-																		</span>
-																	</a>
-                                                                </li>
+													
                                                                 <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
 																	<a  href="/NonRentalUnits" class="m-menu__link ">
 																		<span class="m-menu__link-text">
@@ -965,16 +959,7 @@ $cakeDescription = 'Hotel Manager';
 												</span>
 											</a>
                                         </li>
-                                        <li class="m-menu__item " aria-haspopup="true"  m-menu-link-redirect="1">
-											<a  href="/RoomOwners" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-                                                Room Owners
-												</span>
-											</a>
-                                        </li>
+                                   
                                         <li class="m-menu__item " aria-haspopup="true"  m-menu-link-redirect="1">
 											<a  href="/NonRentalUnits" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">

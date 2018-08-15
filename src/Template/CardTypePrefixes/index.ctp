@@ -139,7 +139,7 @@
         <thead>
             <tr>
                 
-                <th scope="col"><?= $this->Paginator->sort('prefix') ?></th>
+
                 <th scope="col"><?= $this->Paginator->sort('credit_card_type') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('settlement_type_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -151,7 +151,7 @@
             <?php foreach ($cardTypePrefixes as $cardTypePrefix): ?>
             <tr>
         
-                <td><?= h($cardTypePrefix->prefix) ?></td>
+         
                 <td><?= h($cardTypePrefix->credit_card_type) ?></td>
                 <td><?= $cardTypePrefix->has('settlement_type') ? $this->Html->link($cardTypePrefix->settlement_type->settlement_name, ['controller' => 'SettlementTypes', 'action' => 'view', $cardTypePrefix->settlement_type->id]) : '' ?></td>
                 <td><?= h($cardTypePrefix->created) ?></td>

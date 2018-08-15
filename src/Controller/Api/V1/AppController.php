@@ -69,7 +69,7 @@ class AppController extends Controller
             'checkAuthIn' => 'Controller.initialize'
         ]);
 
-        $this->Auth->allow(['display', 'view','index','edit','add','login','delete']);
+        $this->Auth->allow(['display', 'view','index','edit','add','login','delete','get_room_by_type']);
         //$this->Auth->allow(['register','token']);
 
         /*

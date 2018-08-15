@@ -44,6 +44,8 @@ class RoomsController extends AppController
         $this->set('room', $room);
     }
 
+
+
     /**
      * Add method
      *

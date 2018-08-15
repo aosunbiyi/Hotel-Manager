@@ -49,6 +49,24 @@ class RoomsController extends AppController
         ]);
     }
 
+    public function get_room_by_type($room_type_id){
+
+        $rooms = $this->Rooms->find()->where(['room_type_id' => $room_type_id])->contain(['RoomTypes', 'Floors', 'RoomOwners', 'Amenities.AmenityTypes', 'WeekDays', 'RoomImages'])->toList();
+
+   
+        $this->set([
+            'rooms'=>$rooms,
+            '_serialize'=>['rooms']
+        ]);
+    }
+
+    public function out_of_order_rooms($data){
+        $this->set([
+            'rooms'=>$data.rooms,
+            '_serialize'=>['rooms']
+        ]);
+    }
+
     /**
      * Add method
      *

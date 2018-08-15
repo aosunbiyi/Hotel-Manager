@@ -70,8 +70,9 @@ class PropertyDetailsController extends AppController
             }
 
         
-        $this->set(compact('propertyDetail'));
+      
         }
+        $this->set(compact('propertyDetail'));
     }
 
     /**
