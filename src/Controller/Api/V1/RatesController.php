@@ -30,6 +30,17 @@ class RatesController extends AppController
         ]);
     }
 
+    
+    public function get_rate_by_type($rate_type_id){
+
+        $rates = $this->Rates->find()->where(['rate_type_id' => $rate_type_id])->contain(['RateTypes'])->toList();
+   
+        $this->set([
+            'rates'=>$rates,
+            '_serialize'=>['rates']
+        ]);
+    }
+
     /**
      * View method
      *

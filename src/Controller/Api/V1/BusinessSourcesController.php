@@ -30,6 +30,15 @@ class BusinessSourcesController extends AppController
         ]);
     }
 
+    public function get_business_source_by_type_id($id){
+        $businessSources = $this->BusinessSources->find()->where(['business_source_types_id' => $id])->contain(['BusinessSourceTypes'])->toList();
+        $this->set([
+            'businessSources'=>$businessSources,
+            '_serialize'=>['businessSources']
+        ]);
+    }
+
+
     /**
      * View method
      *

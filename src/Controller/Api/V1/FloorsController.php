@@ -30,6 +30,15 @@ class FloorsController extends AppController
         ]);
     }
 
+    public function get_floors_wing_id($id){
+        $floors = $this->Floors->find()->where(['wing_id' => $id])->contain(['Wings','Rooms'])->toList();
+   
+        $this->set([
+            'floors'=>$floors,
+            '_serialize'=>['floors']
+        ]);
+    }
+
     /**
      * View method
      *

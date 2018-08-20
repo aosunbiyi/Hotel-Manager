@@ -60,6 +60,14 @@ class RoomsController extends AppController
         ]);
     }
 
+    public function get_room_by_floor_id($id){
+        $rooms = $this->Rooms->find()->where(['floor_id' => $id])->contain(['RoomTypes', 'Floors', 'RoomOwners', 'Amenities.AmenityTypes', 'WeekDays', 'RoomImages'])->toList();
+        $this->set([
+            'rooms'=>$rooms,
+            '_serialize'=>['rooms']
+        ]);
+    }
+
     public function out_of_order_rooms($data){
         $this->set([
             'rooms'=>$data.rooms,
